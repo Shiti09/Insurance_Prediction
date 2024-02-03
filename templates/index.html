@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <style>
+        body {
+            background-image: url('https://i.postimg.cc/5yYVCCP3/family-2073600.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: hwb(101 14% 29% / 0.855);
+            padding-top: 20px;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 85%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Insurance Charges Prediction</h1>
+    
+    <form action={{ url_for ('predict') }} method="post">
+        <h2>{{prediction_text}}</h2>
+        <label for="field1">Age:</label>
+        <input type="text" id="age" name="age" required>
+
+        <label for="field2">Number of Children:</label>
+        <input type="text" id="children" name="children" required>
+
+        <label for="field3">Past Claim Amount:</label>
+        <input type="text" id="Claim_Amount" name="Claim_Amount" required>
+        
+        <label for="field4">Past consultations:</label>
+        <input type="text" id="past_consultations" name="past_consultations" required>
+
+        <label for="field5">Number of steps you cover in a day:</label>
+        <input type="text" id="num_of_steps" name="num_of_steps" required>
+
+        <label for="field6">Past Hospital Expenditure:</label>
+        <input type="text" id="Hospital_expenditure" name="Hospital_expenditure" required>
+
+        <label for="field7">Past Hospitalizations:</label>
+        <input type="text" id="Past_hospitalizations" name="Past_hospitalizations" required>
+
+        <label for="field8">Annual Salary:</label>
+        <input type="text" id="Anual_Salary" name="Anual_Salary" required>
+        
+        <label for="field9">BMI Label(0- underweight, 1-  normal weight, 2 - overweight, 3 - obese):</label>
+        <input type="text" id="BMI_Label" name="BMI_Label" required>
+        
+        <label for="field10">Gender/Sex(0- Female, 1- Male):</label>
+        <input type="text" id="sex_male" name="sex_male" required>
+
+        <label for="field11">smoker (0- No, 1- Yes):</label>
+        <input type="text" id="smoker_yes" name="smoker_yes" required>
+
+        <label for="field12">region_northwest(Type 1 if you live here or else 0):</label>
+        <input type="text" id="region_northwest" name="region_northwest" required>
+        
+        <label for="field13">region_southeast(Type 1 if you live here or else 0):</label>
+        <input type="text" id="region_southeast" name="region_southeast" required>
+
+        <label for="field14">region_southwest(Type 1 if you live here or else 0):</label>
+        <input type="text" id="region_southwest" name="region_southwest" required>
+
+        <button type="submit" class ="btn btn-primary btn-block btn-large "> Predict
+            
+        </button>
+        
+    </form>
+
+</body>
+</html>

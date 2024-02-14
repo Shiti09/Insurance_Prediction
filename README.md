@@ -41,6 +41,8 @@ To put it in relatively simple terms, it's a technique that uses statistics, ana
 
 - Deployed the Flask application on Render to host the application and make it accessible to users.
 
+  Link- [Insurance Premium Prediction](https://insurance-prediction-igsp.onrender.com/)
+
 
 ![Screenshot (112)](https://github.com/Shiti09/Insurance_Prediction/assets/119621887/65af64ee-bf10-4973-88b3-6783bcc221e8)
 To find the predicted premium the user needs to insert the mentioned columns and then the model will predict a premium.
